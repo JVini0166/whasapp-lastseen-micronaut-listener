@@ -19,8 +19,13 @@ public class WhatsAppLogController implements WhatsAppLogApi {
         return whatsAppLog;
     }
 
-    @Get()
+    @Override
     public List<String> homePage(){
         return whatsAppLogList;
+    }
+
+    @Override
+    public void cleanList(){
+        whatsAppLogList.clear();
     }
 }
